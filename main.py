@@ -21,9 +21,11 @@ def detectors(seed):
     standard_epochs = 40
     dets = [AutoEncoder(num_epochs=standard_epochs, seed=seed),
             DAGMM(num_epochs=standard_epochs, seed=seed, lr=1e-4),
-            DAGMM(num_epochs=standard_epochs, autoencoder_type=DAGMM.AutoEncoder.LSTM, seed=seed),
-            LSTMAD(num_epochs=standard_epochs, seed=seed), LSTMED(num_epochs=standard_epochs, seed=seed),
-            RecurrentEBM(num_epochs=standard_epochs, seed=seed)]
+            DAGMM(num_epochs=standard_epochs, autoencoder_type=DAGMM.AutoEncoder.LSTM, seed=seed)]
+    
+            #LSTMAD(num_epochs=standard_epochs, seed=seed), 
+            #LSTMED(num_epochs=standard_epochs, seed=seed),
+            #RecurrentEBM(num_epochs=standard_epochs, seed=seed)
 
     return sorted(dets, key=lambda x: x.framework)
 
