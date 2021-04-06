@@ -18,7 +18,8 @@ def main():
 
 
 def detectors(seed):
-    standard_epochs = 40
+    #standard_epochs = 40
+    standard_epochs = 10
     dets = [AutoEncoder(num_epochs=standard_epochs, seed=seed),
             DAGMM(num_epochs=standard_epochs, seed=seed, lr=1e-4),
             DAGMM(num_epochs=standard_epochs, autoencoder_type=DAGMM.AutoEncoder.LSTM, seed=seed)]
