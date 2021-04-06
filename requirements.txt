@@ -18,7 +18,7 @@ cycler
 
 
 # Remaining requirements that should be installed if not already done so
-numpy
+numpy==1.17.0
 pandas
 tqdm
 scipy>=0.14.0
